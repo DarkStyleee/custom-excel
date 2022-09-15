@@ -1,0 +1,41 @@
+@import "variables";
+@import "mixins";
+
+.exel__header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: $header_height;
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .input {
+    margin: 0;
+    padding: 5px;
+    min-width: 1px;
+    color: rgb(34, 34, 34);
+    border: 2px solid transparent;
+    border-radius: 4px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    outline: none;
+    background: none;
+    transition: all 0.2s;
+
+    &:hover {
+      border: 2px solid $border_color;
+    }
+
+    &:focus {
+      border: 2px solid #1a73e8;
+    }
+  }
+
+  .button {
+    @include button(green);
+  }
+}
